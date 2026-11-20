@@ -1,0 +1,39 @@
+/**
+ * Archivo: src/index.css
+ * Responsabilidad: Configuración global de Tailwind CSS v4 con variante @custom-variant dark
+ *   controlada por la clase `.dark` en <html>, tokens tipográficos y soporte tabular-nums.
+ * Cumplimiento LuchoRentas.md: Estilo minimalista oscuro por defecto con soporte claro/oscuro
+ *   de alto contraste y alineación tabular para montos BOB/USD y fechas America/La_Paz.
+ */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Public Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}

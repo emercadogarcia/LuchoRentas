@@ -1,0 +1,6 @@
+{
+  "name": "LuchoRentas",
+  "description": "Sistema multi-tenant de administración y control de rentas de casas y cuartos (BOB / USD, zona horaria America/La_Paz).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
